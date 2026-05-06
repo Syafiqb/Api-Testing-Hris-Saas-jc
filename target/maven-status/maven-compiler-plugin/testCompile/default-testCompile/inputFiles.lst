@@ -1,4 +1,9 @@
 /Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/Authorization.java
 /Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/BaseTest.java
 /Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/Department.java
+/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/Employee.java
+/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/PermissionManagement.java
+/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/Position.java
+/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/RoleManagement.java
+/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/UserManagement.java
 /Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/src/test/java/com/juaracoding/UserProfile.java

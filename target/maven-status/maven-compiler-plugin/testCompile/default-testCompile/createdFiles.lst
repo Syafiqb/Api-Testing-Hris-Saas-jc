@@ -1,4 +1,9 @@
+com/juaracoding/PermissionManagement.class
 com/juaracoding/UserProfile.class
 com/juaracoding/Authorization.class
 com/juaracoding/Department.class
+com/juaracoding/RoleManagement.class
+com/juaracoding/Position.class
+com/juaracoding/UserManagement.class
+com/juaracoding/Employee.class
 com/juaracoding/BaseTest.class
