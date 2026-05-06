@@ -15,35 +15,50 @@ public class ExtentTestNGListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReports/ExtentReport.html");
-        extent = new ExtentReports();
-        extent.attachReporter(spark);
-        extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("User", "Tester");
+        if (extent == null) {
+            ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReports/ExtentReport.html");
+            spark.config().setReportName("HRIS API Test Suite");
+            spark.config().setDocumentTitle("Test Execution Report");
+            
+            extent = new ExtentReports();
+            extent.attachReporter(spark);
+            extent.setSystemInfo("Environment", "QA");
+            extent.setSystemInfo("User", "Tester");
+            extent.setSystemInfo("OS", System.getProperty("os.name"));
+            extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+        }
     }
 
     @Override
     public void onTestStart(ITestResult result) {
-        test = extent.createTest(result.getMethod().getMethodName());
+        String className = result.getTestClass().getRealClass().getSimpleName();
+        String methodName = result.getMethod().getMethodName();
+        test = extent.createTest(className + " - " + methodName, 
+                                "Test from " + className + " suite");
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        test.log(Status.PASS, "Test passed");
+        long executionTime = result.getEndMillis() - result.getStartMillis();
+        test.log(Status.PASS, "Test passed successfully in " + executionTime + "ms");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        test.log(Status.FAIL, "Test failed: " + result.getThrowable());
+        long executionTime = result.getEndMillis() - result.getStartMillis();
+        test.log(Status.FAIL, "Test failed after " + executionTime + "ms");
+        test.log(Status.FAIL, "Error: " + result.getThrowable());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        test.log(Status.SKIP, "Test skipped");
+        test.log(Status.SKIP, "Test was skipped");
     }
 
     @Override
     public void onFinish(ITestContext context) {
-        extent.flush();
+        if (extent != null) {
+            extent.flush();
+        }
     }
 }
