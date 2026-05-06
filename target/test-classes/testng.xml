@@ -3,6 +3,10 @@
 
 <suite name="HRIS API Test Suite" verbose="2" parallel="false">
 
+    <listeners>
+        <listener class-name="com.juaracoding.ExtentTestNGListener"/>
+    </listeners>
+
     <!-- 1. Authentication - tidak ada dependency -->
     <test name="Authorization">
         <classes>
