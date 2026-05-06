@@ -59,7 +59,7 @@ public class Position extends BaseTest {
 
     @Test(priority = 4, description = "update data position")
     public void testUpdatePosition() {
-        String newName = "UI Engineer Updated";
+        String newName = "UI Engineer Updated" + System.currentTimeMillis();
         String newDescription = "Bertanggung jawab untuk mengendalikan elemen visual dan interaktif pada aplikasi, termasuk pembaruan terbaru.";
         Response response = adminRequest()
                 .contentType("application/json")

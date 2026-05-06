@@ -3,6 +3,8 @@ package com.juaracoding;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
@@ -10,6 +12,59 @@ import io.restassured.response.Response;
 public class Employee extends BaseTest {
 
     static String employeeId;
+    static String departmentId;
+    static String positionId;
+
+    @BeforeClass
+    public void initData() {
+    // Buat Department
+    String deptName = "IT Department " + System.currentTimeMillis();
+        Response deptResponse = adminRequest()
+                .body(Map.of("name", deptName, "description", "Dept untuk testing"))
+                .when()
+                .post("/api/departments")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        departmentId = deptResponse.jsonPath().getString("data.id");
+        System.out.println("Department ID: " + departmentId);
+
+        // Buat Position
+        String posName = "UI Engineer " + System.currentTimeMillis();
+        Response posResponse = adminRequest()
+                .body(Map.of("name", posName, "description", "Posisi untuk testing"))
+                .when()
+                .post("/api/positions")
+                .then()
+                .statusCode(200)
+                .extract().response();
+        positionId = posResponse.jsonPath().getString("data.id");
+        System.out.println("Position ID: " + positionId);
+    }
+
+    @AfterClass
+    public void cleanData() {
+        // Hapus Department
+        adminRequest()
+                .pathParam("id", departmentId)
+                .when()
+                .delete("/api/departments/{id}")
+                .then()
+                .log().body()
+                .statusCode(200)
+                .extract().response();
+
+        // Hapus Position
+        adminRequest()
+                .pathParam("id", positionId)
+                .when()
+                .delete("/api/positions/{id}")
+                .then()
+                .log().body()
+                .statusCode(200)
+                .extract().response();
+    }
+
 
     @Test(priority = 1, description = "get all employee")
     public void testGetEmployee() {
@@ -24,42 +79,32 @@ public class Employee extends BaseTest {
         Assert.assertEquals(response.statusCode(), 200);
     }
 
-    @Test (priority = 2, description = "add data employee")
+    @Test(priority = 2, description = "add data employee")
     public void testAddEmployee() {
-        String nip = "Hu6gmKbJwOWIJ9Nktpb7";
-        String ktp = "6345704985664658";
-        String fullName = "Suki" + System.currentTimeMillis();
-        String email = "suki" + System.currentTimeMillis() + "@example.com";
-        String phone = "081234567890";
-        String departmentId = "1"; // Ganti dengan ID departemen yang valid
-        String positionId = "1";   // Ganti dengan ID posisi yang valid
-        String address = "Jl. Contoh No. 123, Jakarta";
-        String createAcc = "true";
+        long ts = System.currentTimeMillis();
 
         Response response = adminRequest()
-                .contentType("application/json")
                 .body(Map.of(
-                    "nip", nip,
-                    "ktp", ktp,
-                    "fullName", fullName,
-                    "email", email,
-                    "phone", phone,
-                    "departmentId", departmentId,
-                    "positionId", positionId,
-                    "address", address,
-                    "createAcc", createAcc
+                        "nip",           "NIP" + ts,
+                        "ktp",           "123" + ts,
+                        "fullName",      "Suki " + ts,
+                        "email",         "suki" + ts + "@example.com",
+                        "phone",         "081234567890",
+                        "departmentId",  departmentId,
+                        "positionId",    positionId,
+                        "address",       "Jl. Contoh No. 123, Jakarta",
+                        "createAccount", false
                 ))
-            .when()
+                .when()
                 .post("/api/employees")
-            .then()
+                .then()
                 .log().body()
                 .statusCode(200)
                 .extract().response();
-        Assert.assertEquals(response.statusCode(), 200);
+
         employeeId = response.jsonPath().getString("data.id");
-        
-        System.out.println("ID Employee yang didapat: " + employeeId);
-        Assert.assertNotNull(employeeId, "Daftar employee kosong, tidak bisa lanjut test Get By ID"); 
+        Assert.assertNotNull(employeeId);
+        System.out.println("ID Employee: " + employeeId);
     }
 
     @Test(priority = 3, description = "get data employee by id")
@@ -78,29 +123,28 @@ public class Employee extends BaseTest {
 
     @Test(priority = 4, description = "update data employee")
     public void testUpdateEmployee() {
-        String newFullName = "Suki Updated";
-        String newEmail = "suki.updated" + System.currentTimeMillis() + "@example.com";
-        String newPhone = "081234567890";
-        String newDepartmentId = "1"; // Ganti dengan ID departemen yang valid
-        String newPositionId = "1";   // Ganti dengan ID posisi yang valid
-        String newAddress = "Jl. Contoh No. 123, Jakarta";
+        long ts = System.currentTimeMillis();
+
         Response response = adminRequest()
-                .contentType("application/json")
                 .pathParam("id", employeeId)
                 .body(Map.of(
-                    "fullName", newFullName,
-                    "email", newEmail,
-                    "phone", newPhone,
-                    "departmentId", newDepartmentId,
-                    "positionId", newPositionId,
-                    "address", newAddress
+                        "nip",           "NIP" + ts,
+                        "ktp",           "123" + ts,
+                        "fullName",      "Suki Updated",
+                        "email",         "suki.updated" + ts + "@example.com",
+                        "phone",         "081234567890",
+                        "departmentId",  departmentId,
+                        "positionId",    positionId,
+                        "address",       "Jl. Contoh No. 123, Jakarta",
+                        "createAccount", false
                 ))
-            .when()
+                .when()
                 .put("/api/employees/{id}")
-            .then()
+                .then()
                 .log().body()
                 .statusCode(200)
                 .extract().response();
+
         Assert.assertEquals(response.statusCode(), 200);
     }
 

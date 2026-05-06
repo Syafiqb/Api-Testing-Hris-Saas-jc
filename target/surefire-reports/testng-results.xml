@@ -1,25 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="36" passed="36" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-06T15:57:18 WIB" name="Surefire suite" finished-at="2026-05-06T15:57:19 WIB" duration-ms="905">
+  <suite started-at="2026-05-06T20:35:15 WIB" name="HRIS API Test Suite" finished-at="2026-05-06T20:35:21 WIB" duration-ms="5901">
     <groups>
     </groups>
-    <test started-at="2026-05-06T15:57:18 WIB" name="Surefire test" finished-at="2026-05-06T15:57:19 WIB" duration-ms="905">
+    <test started-at="2026-05-06T20:35:15 WIB" name="Authorization" finished-at="2026-05-06T20:35:16 WIB" duration-ms="725">
       <class name="com.juaracoding.Authorization">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.juaracoding.Authorization@79ca92b9]" started-at="2026-05-06T15:57:14 WIB" name="setup" finished-at="2026-05-06T15:57:18 WIB" duration-ms="4115" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testLoginAdmin()[pri:1, instance:com.juaracoding.Authorization@79ca92b9]" started-at="2026-05-06T15:57:18 WIB" name="testLoginAdmin" description="login admin success" finished-at="2026-05-06T15:57:18 WIB" duration-ms="510" status="PASS">
+        <test-method signature="testLoginAdmin()[pri:1, instance:com.juaracoding.Authorization@3967e60c]" started-at="2026-05-06T20:35:15 WIB" name="testLoginAdmin" description="login admin success" finished-at="2026-05-06T20:35:15 WIB" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAdmin -->
-        <test-method signature="testLoginUser()[pri:2, instance:com.juaracoding.Authorization@79ca92b9]" started-at="2026-05-06T15:57:18 WIB" name="testLoginUser" description="login user success" finished-at="2026-05-06T15:57:19 WIB" duration-ms="360" status="PASS">
+        <test-method signature="testLoginUser()[pri:2, instance:com.juaracoding.Authorization@3967e60c]" started-at="2026-05-06T20:35:15 WIB" name="testLoginUser" description="login user success" finished-at="2026-05-06T20:35:16 WIB" duration-ms="342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginUser -->
       </class> <!-- com.juaracoding.Authorization -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Authorization -->
+    <test started-at="2026-05-06T20:35:16 WIB" name="Department" finished-at="2026-05-06T20:35:16 WIB" duration-ms="577">
+      <class name="com.juaracoding.Department">
+        <test-method signature="testGetAllDepartments()[pri:1, instance:com.juaracoding.Department@7722c3c3]" started-at="2026-05-06T20:35:16 WIB" name="testGetAllDepartments" finished-at="2026-05-06T20:35:16 WIB" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllDepartments -->
+        <test-method signature="testAddDepartment()[pri:2, instance:com.juaracoding.Department@7722c3c3]" started-at="2026-05-06T20:35:16 WIB" name="testAddDepartment" description="add data department" finished-at="2026-05-06T20:35:16 WIB" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDepartment -->
+        <test-method signature="testGetDepartmentById()[pri:3, instance:com.juaracoding.Department@7722c3c3]" started-at="2026-05-06T20:35:16 WIB" name="testGetDepartmentById" description="get data department by id" finished-at="2026-05-06T20:35:16 WIB" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDepartmentById -->
+        <test-method signature="testUpdateDepartment()[pri:4, instance:com.juaracoding.Department@7722c3c3]" started-at="2026-05-06T20:35:16 WIB" name="testUpdateDepartment" description="update data department" finished-at="2026-05-06T20:35:16 WIB" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateDepartment -->
+        <test-method signature="testDeleteDepartment()[pri:5, instance:com.juaracoding.Department@7722c3c3]" started-at="2026-05-06T20:35:16 WIB" name="testDeleteDepartment" description="delete data department" finished-at="2026-05-06T20:35:16 WIB" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteDepartment -->
+      </class> <!-- com.juaracoding.Department -->
+    </test> <!-- Department -->
+    <test started-at="2026-05-06T20:35:16 WIB" name="Position" finished-at="2026-05-06T20:35:17 WIB" duration-ms="559">
+      <class name="com.juaracoding.Position">
+        <test-method signature="testGetPosition()[pri:1, instance:com.juaracoding.Position@5af3afd9]" started-at="2026-05-06T20:35:16 WIB" name="testGetPosition" description="get all position" finished-at="2026-05-06T20:35:16 WIB" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPosition -->
+        <test-method signature="testAddPosition()[pri:2, instance:com.juaracoding.Position@5af3afd9]" started-at="2026-05-06T20:35:16 WIB" name="testAddPosition" description="add data position" finished-at="2026-05-06T20:35:16 WIB" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPosition -->
+        <test-method signature="testGetPositionById()[pri:3, instance:com.juaracoding.Position@5af3afd9]" started-at="2026-05-06T20:35:16 WIB" name="testGetPositionById" description="get data position by id" finished-at="2026-05-06T20:35:16 WIB" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPositionById -->
+        <test-method signature="testUpdatePosition()[pri:4, instance:com.juaracoding.Position@5af3afd9]" started-at="2026-05-06T20:35:16 WIB" name="testUpdatePosition" description="update data position" finished-at="2026-05-06T20:35:17 WIB" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatePosition -->
+        <test-method signature="testDeletePosition()[pri:5, instance:com.juaracoding.Position@5af3afd9]" started-at="2026-05-06T20:35:17 WIB" name="testDeletePosition" description="delete data position" finished-at="2026-05-06T20:35:17 WIB" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeletePosition -->
+      </class> <!-- com.juaracoding.Position -->
+    </test> <!-- Position -->
+    <test started-at="2026-05-06T20:35:17 WIB" name="PermissionManagement" finished-at="2026-05-06T20:35:17 WIB" duration-ms="579">
+      <class name="com.juaracoding.PermissionManagement">
+        <test-method signature="testGetPermission()[pri:1, instance:com.juaracoding.PermissionManagement@131774fe]" started-at="2026-05-06T20:35:17 WIB" name="testGetPermission" description="get all permission" finished-at="2026-05-06T20:35:17 WIB" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPermission -->
+        <test-method signature="testCreatePermission()[pri:2, instance:com.juaracoding.PermissionManagement@131774fe]" started-at="2026-05-06T20:35:17 WIB" name="testCreatePermission" description="create permission" finished-at="2026-05-06T20:35:17 WIB" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreatePermission -->
+        <test-method signature="testGetPermissionById()[pri:3, instance:com.juaracoding.PermissionManagement@131774fe]" started-at="2026-05-06T20:35:17 WIB" name="testGetPermissionById" description="get data permission by id" finished-at="2026-05-06T20:35:17 WIB" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPermissionById -->
+        <test-method signature="testUpdatePermission()[pri:4, instance:com.juaracoding.PermissionManagement@131774fe]" started-at="2026-05-06T20:35:17 WIB" name="testUpdatePermission" description="update data permission" finished-at="2026-05-06T20:35:17 WIB" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatePermission -->
+        <test-method signature="testDeletePermission()[pri:5, instance:com.juaracoding.PermissionManagement@131774fe]" started-at="2026-05-06T20:35:17 WIB" name="testDeletePermission" description="delete data permission" finished-at="2026-05-06T20:35:17 WIB" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeletePermission -->
+      </class> <!-- com.juaracoding.PermissionManagement -->
+    </test> <!-- PermissionManagement -->
+    <test started-at="2026-05-06T20:35:17 WIB" name="RoleManagement" finished-at="2026-05-06T20:35:18 WIB" duration-ms="838">
+      <class name="com.juaracoding.RoleManagement">
+        <test-method is-config="true" signature="initData()[pri:0, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:17 WIB" name="initData" finished-at="2026-05-06T20:35:17 WIB" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initData -->
+        <test-method signature="testGetRole()[pri:1, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:17 WIB" name="testGetRole" description="get all role" finished-at="2026-05-06T20:35:18 WIB" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRole -->
+        <test-method signature="testCreateRole()[pri:2, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:18 WIB" name="testCreateRole" description="Create role" finished-at="2026-05-06T20:35:18 WIB" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRole -->
+        <test-method signature="testGetRoleById()[pri:3, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:18 WIB" name="testGetRoleById" description="get data role by id" finished-at="2026-05-06T20:35:18 WIB" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRoleById -->
+        <test-method signature="testUpdateRole()[pri:4, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:18 WIB" name="testUpdateRole" description="update data role" finished-at="2026-05-06T20:35:18 WIB" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateRole -->
+        <test-method signature="testDeleteRole()[pri:5, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:18 WIB" name="testDeleteRole" description="delete data role" finished-at="2026-05-06T20:35:18 WIB" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteRole -->
+        <test-method is-config="true" signature="cleanData()[pri:0, instance:com.juaracoding.RoleManagement@a1153bc]" started-at="2026-05-06T20:35:18 WIB" name="cleanData" finished-at="2026-05-06T20:35:18 WIB" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanData -->
+      </class> <!-- com.juaracoding.RoleManagement -->
+    </test> <!-- RoleManagement -->
+    <test started-at="2026-05-06T20:35:18 WIB" name="UserManagement" finished-at="2026-05-06T20:35:19 WIB" duration-ms="1039">
+      <class name="com.juaracoding.UserManagement">
+        <test-method signature="testGetUser()[pri:1, instance:com.juaracoding.UserManagement@6a6cb05c]" started-at="2026-05-06T20:35:18 WIB" name="testGetUser" description="get all user" finished-at="2026-05-06T20:35:18 WIB" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUser -->
+        <test-method signature="testAddUser()[pri:2, instance:com.juaracoding.UserManagement@6a6cb05c]" started-at="2026-05-06T20:35:18 WIB" name="testAddUser" description="add data user" finished-at="2026-05-06T20:35:19 WIB" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUser -->
+        <test-method signature="testGetUserById()[pri:3, instance:com.juaracoding.UserManagement@6a6cb05c]" started-at="2026-05-06T20:35:19 WIB" name="testGetUserById" description="get data user by id" finished-at="2026-05-06T20:35:19 WIB" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserById -->
+        <test-method signature="testUpdateUser()[pri:4, instance:com.juaracoding.UserManagement@6a6cb05c]" started-at="2026-05-06T20:35:19 WIB" name="testUpdateUser" description="update data user" finished-at="2026-05-06T20:35:19 WIB" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUser -->
+        <test-method signature="testDeleteUser()[pri:5, instance:com.juaracoding.UserManagement@6a6cb05c]" started-at="2026-05-06T20:35:19 WIB" name="testDeleteUser" description="delete data user" finished-at="2026-05-06T20:35:19 WIB" duration-ms="183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUser -->
+      </class> <!-- com.juaracoding.UserManagement -->
+    </test> <!-- UserManagement -->
+    <test started-at="2026-05-06T20:35:19 WIB" name="Employee" finished-at="2026-05-06T20:35:20 WIB" duration-ms="1099">
+      <class name="com.juaracoding.Employee">
+        <test-method is-config="true" signature="initData()[pri:0, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:19 WIB" name="initData" finished-at="2026-05-06T20:35:19 WIB" duration-ms="270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initData -->
+        <test-method signature="testGetEmployee()[pri:1, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:19 WIB" name="testGetEmployee" description="get all employee" finished-at="2026-05-06T20:35:20 WIB" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetEmployee -->
+        <test-method signature="testAddEmployee()[pri:2, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:20 WIB" name="testAddEmployee" description="add data employee" finished-at="2026-05-06T20:35:20 WIB" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddEmployee -->
+        <test-method signature="testGetEmployeeById()[pri:3, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:20 WIB" name="testGetEmployeeById" description="get data employee by id" finished-at="2026-05-06T20:35:20 WIB" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetEmployeeById -->
+        <test-method signature="testUpdateEmployee()[pri:4, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:20 WIB" name="testUpdateEmployee" description="update data employee" finished-at="2026-05-06T20:35:20 WIB" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateEmployee -->
+        <test-method signature="testDeleteEmployee()[pri:5, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:20 WIB" name="testDeleteEmployee" description="delete data employee" finished-at="2026-05-06T20:35:20 WIB" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteEmployee -->
+        <test-method is-config="true" signature="cleanData()[pri:0, instance:com.juaracoding.Employee@3d285d7e]" started-at="2026-05-06T20:35:20 WIB" name="cleanData" finished-at="2026-05-06T20:35:20 WIB" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanData -->
+      </class> <!-- com.juaracoding.Employee -->
+    </test> <!-- Employee -->
+    <test started-at="2026-05-06T20:35:20 WIB" name="UserProfile" finished-at="2026-05-06T20:35:21 WIB" duration-ms="458">
+      <class name="com.juaracoding.UserProfile">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.juaracoding.UserProfile@c0c2f8d]" started-at="2026-05-06T20:35:13 WIB" name="setup" finished-at="2026-05-06T20:35:15 WIB" duration-ms="1546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGetProfileAdmin()[pri:1, instance:com.juaracoding.UserProfile@c0c2f8d]" started-at="2026-05-06T20:35:20 WIB" name="testGetProfileAdmin" description="Get profile admin - berhasil" finished-at="2026-05-06T20:35:20 WIB" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetProfileAdmin -->
+        <test-method signature="testGetProfileUser()[pri:2, instance:com.juaracoding.UserProfile@c0c2f8d]" started-at="2026-05-06T20:35:20 WIB" name="testGetProfileUser" description="Get profile user biasa - berhasil" finished-at="2026-05-06T20:35:20 WIB" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetProfileUser -->
+        <test-method signature="testGetProfileUnauthorized()[pri:3, instance:com.juaracoding.UserProfile@c0c2f8d]" started-at="2026-05-06T20:35:20 WIB" name="testGetProfileUnauthorized" description="Get profile tanpa token - harus 401/403" finished-at="2026-05-06T20:35:21 WIB" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetProfileUnauthorized -->
+        <test-method signature="testUpdateProfileAdmin()[pri:4, instance:com.juaracoding.UserProfile@c0c2f8d]" started-at="2026-05-06T20:35:21 WIB" name="testUpdateProfileAdmin" description="Update profile admin - berhasil" finished-at="2026-05-06T20:35:21 WIB" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateProfileAdmin -->
+      </class> <!-- com.juaracoding.UserProfile -->
+    </test> <!-- UserProfile -->
+  </suite> <!-- HRIS API Test Suite -->
 </testng-results>

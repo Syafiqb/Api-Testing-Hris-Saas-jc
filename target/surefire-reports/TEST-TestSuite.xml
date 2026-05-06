@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="TestSuite" time="7.633" tests="36" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/test-classes:/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/classes:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/rest-assured/6.0.0/rest-assured-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/groovy/groovy/5.0.3/groovy-5.0.3.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/groovy/groovy-xml/5.0.3/groovy-xml-5.0.3.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/syafiqbasmallah/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/syafiqbasmallah/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/syafiqbasmallah/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/syafiqbasmallah/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/json-path/6.0.0/json-path-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/groovy/groovy-json/5.0.3/groovy-json-5.0.3.jar:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/rest-assured-common/6.0.0/rest-assured-common-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/xml-path/6.0.0/xml-path-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/Users/syafiqbasmallah/.m2/repository/org/testng/testng/7.12.0/testng-7.12.0.jar:/Users/syafiqbasmallah/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/syafiqbasmallah/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/syafiqbasmallah/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/syafiqbasmallah/.m2/repository/tools/jackson/core/jackson-databind/3.1.1/jackson-databind-3.1.1.jar:/Users/syafiqbasmallah/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/Users/syafiqbasmallah/.m2/repository/tools/jackson/core/jackson-core/3.1.1/jackson-core-3.1.1.jar:/Users/syafiqbasmallah/.m2/repository/io/github/cdimascio/dotenv-java/3.2.0/dotenv-java-3.2.0.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/surefire/surefirebooter-20260506203513503_3.jar /Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/surefire 2026-05-06T20-35-13_461-jvmRun1 surefire-20260506203513503_1tmp surefire_0-20260506203513503_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/test-classes:/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/classes:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/rest-assured/6.0.0/rest-assured-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/groovy/groovy/5.0.3/groovy-5.0.3.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/groovy/groovy-xml/5.0.3/groovy-xml-5.0.3.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/syafiqbasmallah/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/syafiqbasmallah/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/syafiqbasmallah/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/syafiqbasmallah/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/json-path/6.0.0/json-path-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/groovy/groovy-json/5.0.3/groovy-json-5.0.3.jar:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/rest-assured-common/6.0.0/rest-assured-common-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/io/rest-assured/xml-path/6.0.0/xml-path-6.0.0.jar:/Users/syafiqbasmallah/.m2/repository/org/apache/commons/commons-lang3/3.19.0/commons-lang3-3.19.0.jar:/Users/syafiqbasmallah/.m2/repository/org/testng/testng/7.12.0/testng-7.12.0.jar:/Users/syafiqbasmallah/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/syafiqbasmallah/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/syafiqbasmallah/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/syafiqbasmallah/.m2/repository/tools/jackson/core/jackson-databind/3.1.1/jackson-databind-3.1.1.jar:/Users/syafiqbasmallah/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/Users/syafiqbasmallah/.m2/repository/tools/jackson/core/jackson-core/3.1.1/jackson-core-3.1.1.jar:/Users/syafiqbasmallah/.m2/repository/io/github/cdimascio/dotenv-java/3.2.0/dotenv-java-3.2.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/syafiqbasmallah"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing/target/surefire/surefirebooter-20260506203513503_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25.0.2"/>
+    <property name="user.name" value="syafiqbasmallah"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.3.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/syafiqbasmallah/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/5x/lr8ch4vj16j2r90wc7vjlbmw0000gn/T/"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="/Users/syafiqbasmallah/Documents/Hris-saas-jc/hris-api-testing"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/syafiqbasmallah/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="25.0.2"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testLoginAdmin" classname="com.juaracoding.Authorization" time="0.37">
+    <system-out><![CDATA[...
+... TestNG 7.12.0 by Cédric Beust (cedric@beust.com)
+...
+
+=== Login sukses, token didapat ===
+user token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHB0ZGlrYS5jb20iLCJleHAiOjE3NzgxNjA5MTUsImlhdCI6MTc3ODA3NDUxNSwianRpIjoiYzVlOTA2YTYtMDA3ZS00ZGRkLTg4YmEtNDk0NzFmZjA4ZmJkIiwicm9sZXMiOiJST0xFX1VTRVIsY29yZTpyZWFkLGhyaXM6cmVhZCxGQUNUT1JfUEFTU1dPUkQifQ.vkvep2USIm1f3y-KG2X5GkYAMF9kkYSOom8QE-GJ2_Q
+login admin
+success: true
+message: Login successful
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testLoginUser" classname="com.juaracoding.Authorization" time="0.34">
+    <system-out><![CDATA[login user
+success: true
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAllDepartments" classname="com.juaracoding.Department" time="0.132">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Departments fetched successfully",
+    "data": {
+        "pageInfo": {
+            "totalElements": 1,
+            "totalPages": 1,
+            "currentPage": 1,
+            "pageSize": 10
+        },
+        "content": [
+            {
+                "description": "QA Department for Software Testing",
+                "id": "5fbbe2c1-6b5b-4a5a-8962-ef40ae58e17e",
+                "name": "Quality Assurance 1778062354826"
+            }
+        ]
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testAddDepartment" classname="com.juaracoding.Department" time="0.109">
+    <system-out><![CDATA[add data department
+{
+    "success": true,
+    "message": "Department created successfully",
+    "data": {
+        "description": "Menjadi pengendali teknologi informasi di perusahaan",
+        "id": "c14bc6f0-eb9e-4c19-b5be-b7ac95ef5cde",
+        "name": "IT Department1778074516195"
+    }
+}
+ID Departemen yang didapat: c14bc6f0-eb9e-4c19-b5be-b7ac95ef5cde
+]]></system-out>
+  </testcase>
+  <testcase name="testGetDepartmentById" classname="com.juaracoding.Department" time="0.108">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Department fetched successfully",
+    "data": {
+        "description": "Menjadi pengendali teknologi informasi di perusahaan",
+        "id": "c14bc6f0-eb9e-4c19-b5be-b7ac95ef5cde",
+        "name": "IT Department1778074516195"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateDepartment" classname="com.juaracoding.Department" time="0.116">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Department updated successfully",
+    "data": {
+        "description": "Deskripsi baru untuk IT Department",
+        "id": "c14bc6f0-eb9e-4c19-b5be-b7ac95ef5cde",
+        "name": "IT Department Updated1778074516412"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteDepartment" classname="com.juaracoding.Department" time="0.109">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Department deleted successfully",
+    "data": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPosition" classname="com.juaracoding.Position" time="0.109">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Positions fetched successfully",
+    "data": {
+        "pageInfo": {
+            "totalElements": 3,
+            "totalPages": 1,
+            "currentPage": 1,
+            "pageSize": 10
+        },
+        "content": [
+            {
+                "description": "Medasdasfdsfdjsfsdfsd",
+                "id": "5ed7f5b2-2b3d-4879-a2f1-8ebbd0f8193c",
+                "name": "QA Engineer"
+            },
+            {
+                "description": "Responsible for automated API and UI testing",
+                "id": "5a60832b-fef1-4aff-bbd2-180cd38e6045",
+                "name": "QA Automation Engineer 1778063912556"
+            },
+            {
+                "description": "Responsible for automated API and UI testing",
+                "id": "ba4b5dde-fc69-4853-a250-dc00c8a6bada",
+                "name": "QA Automation Engineer 1778063869779"
+            }
+        ]
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testAddPosition" classname="com.juaracoding.Position" time="0.114">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Position created successfully",
+    "data": {
+        "description": "Bertanggung jawab untuk mengendalikan elemen visual dan interaktif pada aplikasi",
+        "id": "aba289d3-aa3d-4be3-87ac-3cb8d26804d8",
+        "name": "UI Engineer1778074516749"
+    }
+}
+ID Position yang didapat: aba289d3-aa3d-4be3-87ac-3cb8d26804d8
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPositionById" classname="com.juaracoding.Position" time="0.105">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Position fetched successfully",
+    "data": {
+        "description": "Bertanggung jawab untuk mengendalikan elemen visual dan interaktif pada aplikasi",
+        "id": "aba289d3-aa3d-4be3-87ac-3cb8d26804d8",
+        "name": "UI Engineer1778074516749"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdatePosition" classname="com.juaracoding.Position" time="0.111">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Position updated successfully",
+    "data": {
+        "description": "Bertanggung jawab untuk mengendalikan elemen visual dan interaktif pada aplikasi, termasuk pembaruan terbaru.",
+        "id": "aba289d3-aa3d-4be3-87ac-3cb8d26804d8",
+        "name": "UI Engineer Updated1778074516968"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDeletePosition" classname="com.juaracoding.Position" time="0.119">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Position deleted successfully",
+    "data": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPermission" classname="com.juaracoding.PermissionManagement" time="0.12">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permissions fetched successfully",
+    "data": {
+        "totalItems": 8,
+        "data": [
+            {
+                "id": "198b4c62-d820-423e-8943-c84059e45d48",
+                "name": "core:delete",
+                "resource": null,
+                "action": null,
+                "description": "Permission to delete core"
+            },
+            {
+                "id": "cd7be85d-424a-40d2-9f6f-156a8849570f",
+                "name": "core:update",
+                "resource": null,
+                "action": null,
+                "description": "Permission to update core"
+            },
+            {
+                "id": "99556626-66f7-4371-9bf8-cc2cf561a539",
+                "name": "core:create",
+                "resource": null,
+                "action": null,
+                "description": "Permission to create core"
+            },
+            {
+                "id": "1df7be4b-2dbe-48a9-862b-4e3a99963f67",
+                "name": "core:read",
+                "resource": null,
+                "action": null,
+                "description": "Permission to read core"
+            },
+            {
+                "id": "264c8af9-096f-4936-a87d-55e9260ee828",
+                "name": "hris:delete",
+                "resource": null,
+                "action": null,
+                "description": "Permission to delete hris"
+            },
+            {
+                "id": "2da8eb45-27fa-440d-8749-d69efcab4ed9",
+                "name": "hris:update",
+                "resource": null,
+                "action": null,
+                "description": "Permission to update hris"
+            },
+            {
+                "id": "3e5e8c8c-50a8-4d18-908f-0189de86cf81",
+                "name": "hris:create",
+                "resource": null,
+                "action": null,
+                "description": "Permission to create hris"
+            },
+            {
+                "id": "b6dc5c4f-7b90-46e2-a99c-87085d403c96",
+                "name": "hris:read",
+                "resource": null,
+                "action": null,
+                "description": "Permission to read hris"
+            }
+        ],
+        "totalPages": 1,
+        "currentPage": 1
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCreatePermission" classname="com.juaracoding.PermissionManagement" time="0.125">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permission created successfully",
+    "data": {
+        "id": "b3d54abe-b5b9-4f6a-9055-61456e7f769c",
+        "name": "Create Employee",
+        "resource": null,
+        "action": null,
+        "description": "Izin untuk membuat data employee"
+    }
+}
+ID Permission yang didapat: b3d54abe-b5b9-4f6a-9055-61456e7f769c
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPermissionById" classname="com.juaracoding.PermissionManagement" time="0.105">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permission fetched successfully",
+    "data": {
+        "id": "b3d54abe-b5b9-4f6a-9055-61456e7f769c",
+        "name": "Create Employee",
+        "resource": null,
+        "action": null,
+        "description": "Izin untuk membuat data employee"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdatePermission" classname="com.juaracoding.PermissionManagement" time="0.109">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permission updated successfully",
+    "data": {
+        "id": "b3d54abe-b5b9-4f6a-9055-61456e7f769c",
+        "name": "Update Employee",
+        "resource": null,
+        "action": null,
+        "description": "Izin untuk memperbarui data employee"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDeletePermission" classname="com.juaracoding.PermissionManagement" time="0.12">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permission deleted successfully",
+    "data": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetRole" classname="com.juaracoding.RoleManagement" time="0.118">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permission created successfully",
+    "data": {
+        "id": "5235310f-e541-4d18-a43c-0fc43340c505",
+        "name": "Create Employee",
+        "resource": null,
+        "action": null,
+        "description": "Izin untuk membuat data employee"
+    }
+}
+ID Permission yang didapat: 5235310f-e541-4d18-a43c-0fc43340c505
+{
+    "success": true,
+    "message": "Roles fetched successfully",
+    "data": {
+        "totalItems": 2,
+        "data": [
+            {
+                "id": "fb1f325e-f843-458a-ac7d-500e2a5d5949",
+                "name": "ROLE_USER",
+                "description": "Standard user with read-only access",
+                "permissions": [
+                    {
+                        "id": "b6dc5c4f-7b90-46e2-a99c-87085d403c96",
+                        "name": "hris:read",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to read hris"
+                    },
+                    {
+                        "id": "1df7be4b-2dbe-48a9-862b-4e3a99963f67",
+                        "name": "core:read",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to read core"
+                    }
+                ],
+                "createdAt": null,
+                "updatedAt": null
+            },
+            {
+                "id": "4a01d371-68da-4f13-8032-5914571ddf6b",
+                "name": "ROLE_ADMIN",
+                "description": "Administrator with full access",
+                "permissions": [
+                    {
+                        "id": "3e5e8c8c-50a8-4d18-908f-0189de86cf81",
+                        "name": "hris:create",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to create hris"
+                    },
+                    {
+                        "id": "b6dc5c4f-7b90-46e2-a99c-87085d403c96",
+                        "name": "hris:read",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to read hris"
+                    },
+                    {
+                        "id": "198b4c62-d820-423e-8943-c84059e45d48",
+                        "name": "core:delete",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to delete core"
+                    },
+                    {
+                        "id": "1df7be4b-2dbe-48a9-862b-4e3a99963f67",
+                        "name": "core:read",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to read core"
+                    },
+                    {
+                        "id": "2da8eb45-27fa-440d-8749-d69efcab4ed9",
+                        "name": "hris:update",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to update hris"
+                    },
+                    {
+                        "id": "99556626-66f7-4371-9bf8-cc2cf561a539",
+                        "name": "core:create",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to create core"
+                    },
+                    {
+                        "id": "cd7be85d-424a-40d2-9f6f-156a8849570f",
+                        "name": "core:update",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to update core"
+                    },
+                    {
+                        "id": "264c8af9-096f-4936-a87d-55e9260ee828",
+                        "name": "hris:delete",
+                        "resource": null,
+                        "action": null,
+                        "description": "Permission to delete hris"
+                    }
+                ],
+                "createdAt": null,
+                "updatedAt": null
+            }
+        ],
+        "totalPages": 1,
+        "currentPage": 1
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateRole" classname="com.juaracoding.RoleManagement" time="0.142">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Role created successfully",
+    "data": {
+        "id": "a109736e-fa1b-4566-8f2c-4bc0f3332d46",
+        "name": "ahmad suki1778074518013",
+        "description": "Role untuk testing API",
+        "permissions": [
+            {
+                "id": "5235310f-e541-4d18-a43c-0fc43340c505",
+                "name": "Create Employee",
+                "resource": null,
+                "action": null,
+                "description": "Izin untuk membuat data employee"
+            }
+        ],
+        "createdAt": null,
+        "updatedAt": null
+    }
+}
+ID Role yang didapat: a109736e-fa1b-4566-8f2c-4bc0f3332d46
+]]></system-out>
+  </testcase>
+  <testcase name="testGetRoleById" classname="com.juaracoding.RoleManagement" time="0.092">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Role fetched successfully",
+    "data": {
+        "id": "a109736e-fa1b-4566-8f2c-4bc0f3332d46",
+        "name": "ahmad suki1778074518013",
+        "description": "Role untuk testing API",
+        "permissions": [
+            {
+                "id": "5235310f-e541-4d18-a43c-0fc43340c505",
+                "name": "Create Employee",
+                "resource": null,
+                "action": null,
+                "description": "Izin untuk membuat data employee"
+            }
+        ],
+        "createdAt": null,
+        "updatedAt": null
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateRole" classname="com.juaracoding.RoleManagement" time="0.121">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Role updated successfully",
+    "data": {
+        "id": "a109736e-fa1b-4566-8f2c-4bc0f3332d46",
+        "name": "ahmad suki updated1778074518248",
+        "description": "Role untuk testing API - Updated",
+        "permissions": [
+            {
+                "id": "5235310f-e541-4d18-a43c-0fc43340c505",
+                "name": "Create Employee",
+                "resource": null,
+                "action": null,
+                "description": "Izin untuk membuat data employee"
+            }
+        ],
+        "createdAt": null,
+        "updatedAt": null
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteRole" classname="com.juaracoding.RoleManagement" time="0.141">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Role deleted successfully",
+    "data": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetUser" classname="com.juaracoding.UserManagement" time="0.13">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Permission deleted successfully",
+    "data": null
+}
+{
+    "success": true,
+    "message": "Users fetched successfully",
+    "data": {
+        "pageInfo": {
+            "totalElements": 5,
+            "totalPages": 1,
+            "currentPage": 1,
+            "pageSize": 10
+        },
+        "content": [
+            {
+                "active": true,
+                "email": "johndoe1778064251002@example.com",
+                "fullName": "John Doe",
+                "id": "b092be65-9b8a-4763-899b-377377dd0c87",
+                "ipAddress": null,
+                "lastAccess": null,
+                "photo": null,
+                "roles": [
+                    "ROLE_USER"
+                ],
+                "username": "NIP1778064251"
+            },
+            {
+                "active": true,
+                "email": "johndoe1778064172659@example.com",
+                "fullName": "John Doe",
+                "id": "087142de-a4b8-4b8b-9a9b-4ba41eb472e8",
+                "ipAddress": null,
+                "lastAccess": null,
+                "photo": null,
+                "roles": [
+                    "ROLE_USER"
+                ],
+                "username": "NIP1778064172"
+            },
+            {
+                "active": true,
+                "email": "johndoe1778064129335@example.com",
+                "fullName": "John Doe",
+                "id": "49dffdbc-f873-413a-915f-8aaace10d3fc",
+                "ipAddress": null,
+                "lastAccess": null,
+                "photo": null,
+                "roles": [
+                    "ROLE_USER"
+                ],
+                "username": "NIP1778064129"
+            },
+            {
+                "active": true,
+                "email": "user@ptdika.com",
+                "fullName": "Regular Employee",
+                "id": "4e2854fd-a2e8-49d8-8060-5e1d27a22f99",
+                "ipAddress": "125.163.23.72",
+                "lastAccess": "2026-05-06T20:35:16.023079",
+                "photo": null,
+                "roles": [
+                    "ROLE_USER"
+                ],
+                "username": "user"
+            },
+            {
+                "active": true,
+                "email": "admin@ptdika.com",
+                "fullName": "Admin Updated",
+                "id": "af4b61c0-6a47-4217-8ac6-5a2042b4a88a",
+                "ipAddress": "125.163.23.72",
+                "lastAccess": "2026-05-06T20:35:15.65573",
+                "photo": "https://devops.juaracoding.com/hris/uploads/profile_admin_e94adb31-935c-4be0-95ac-b327592b5b79.jpeg",
+                "roles": [
+                    "ROLE_ADMIN"
+                ],
+                "username": "admin"
+            }
+        ]
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testAddUser" classname="com.juaracoding.UserManagement" time="0.277">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "User created successfully",
+    "data": {
+        "active": true,
+        "email": "suki1778074518750@example.com",
+        "fullName": "Suki ahmad",
+        "id": "dd394e6a-c7b6-4ef3-96ba-26488d92316a",
+        "ipAddress": null,
+        "lastAccess": null,
+        "photo": null,
+        "roles": [
+            "ROLE_USER"
+        ],
+        "username": "Suki1778074518750"
+    }
+}
+ID User yang didapat: dd394e6a-c7b6-4ef3-96ba-26488d92316a
+]]></system-out>
+  </testcase>
+  <testcase name="testGetUserById" classname="com.juaracoding.UserManagement" time="0.1">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "User fetched successfully",
+    "data": {
+        "active": true,
+        "email": "suki1778074518750@example.com",
+        "fullName": "Suki ahmad",
+        "id": "dd394e6a-c7b6-4ef3-96ba-26488d92316a",
+        "ipAddress": null,
+        "lastAccess": null,
+        "photo": null,
+        "roles": [
+            "ROLE_USER"
+        ],
+        "username": "Suki1778074518750"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateUser" classname="com.juaracoding.UserManagement" time="0.348">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "User updated successfully",
+    "data": {
+        "active": true,
+        "email": "sukiupdated1778074519128@example.com",
+        "fullName": "Suki Ahmad Updated",
+        "id": "dd394e6a-c7b6-4ef3-96ba-26488d92316a",
+        "ipAddress": null,
+        "lastAccess": null,
+        "photo": null,
+        "roles": [
+            "ROLE_USER"
+        ],
+        "username": "SukiUpdated1778074519128"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteUser" classname="com.juaracoding.UserManagement" time="0.182">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "User deleted successfully",
+    "data": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetEmployee" classname="com.juaracoding.Employee" time="0.108">
+    <system-out><![CDATA[Department ID: ffc7eb70-dcc1-4663-a9be-2a3657b8230b
+Position ID: a5ae5c63-5b9e-4c10-8dea-78a032c3384f
+{
+    "success": true,
+    "message": "Employees fetched successfully",
+    "data": {
+        "pageInfo": {
+            "totalElements": 1,
+            "totalPages": 1,
+            "currentPage": 1,
+            "pageSize": 10
+        },
+        "content": [
+            {
+                "address": "123 Main St, City",
+                "department": {
+                    "description": "QA Department for Software Testing",
+                    "id": "5fbbe2c1-6b5b-4a5a-8962-ef40ae58e17e",
+                    "name": "Quality Assurance 1778062354826"
+                },
+                "email": "johndoe1778064129335@example.com",
+                "fullName": "John Doe",
+                "id": "55e66ccc-34fc-43d1-a122-d39f942b2bd8",
+                "ktp": "1231778064129335",
+                "nip": "NIP1778064129",
+                "phone": "08123456789",
+                "photo": null,
+                "position": {
+                    "description": "Medasdasfdsfdjsfsdfsd",
+                    "id": "5ed7f5b2-2b3d-4879-a2f1-8ebbd0f8193c",
+                    "name": "QA Engineer"
+                }
+            }
+        ]
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testAddEmployee" classname="com.juaracoding.Employee" time="0.117">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Employee created successfully",
+    "data": {
+        "address": "Jl. Contoh No. 123, Jakarta",
+        "department": {
+            "description": "Dept untuk testing",
+            "id": "ffc7eb70-dcc1-4663-a9be-2a3657b8230b",
+            "name": "IT Department 1778074519660"
+        },
+        "email": "suki1778074520038@example.com",
+        "fullName": "Suki 1778074520038",
+        "id": "b98fa845-fefb-4ce4-92e2-35ed919ed4b1",
+        "ktp": "1231778074520038",
+        "nip": "NIP1778074520038",
+        "phone": "081234567890",
+        "photo": null,
+        "position": {
+            "description": "Posisi untuk testing",
+            "id": "a5ae5c63-5b9e-4c10-8dea-78a032c3384f",
+            "name": "UI Engineer 1778074519792"
+        }
+    }
+}
+ID Employee: b98fa845-fefb-4ce4-92e2-35ed919ed4b1
+]]></system-out>
+  </testcase>
+  <testcase name="testGetEmployeeById" classname="com.juaracoding.Employee" time="0.103">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Employee fetched successfully",
+    "data": {
+        "address": "Jl. Contoh No. 123, Jakarta",
+        "department": {
+            "description": "Dept untuk testing",
+            "id": "ffc7eb70-dcc1-4663-a9be-2a3657b8230b",
+            "name": "IT Department 1778074519660"
+        },
+        "email": "suki1778074520038@example.com",
+        "fullName": "Suki 1778074520038",
+        "id": "b98fa845-fefb-4ce4-92e2-35ed919ed4b1",
+        "ktp": "1231778074520038",
+        "nip": "NIP1778074520038",
+        "phone": "081234567890",
+        "photo": null,
+        "position": {
+            "description": "Posisi untuk testing",
+            "id": "a5ae5c63-5b9e-4c10-8dea-78a032c3384f",
+            "name": "UI Engineer 1778074519792"
+        }
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateEmployee" classname="com.juaracoding.Employee" time="0.169">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Employee updated successfully",
+    "data": {
+        "address": "Jl. Contoh No. 123, Jakarta",
+        "department": {
+            "description": "Dept untuk testing",
+            "id": "ffc7eb70-dcc1-4663-a9be-2a3657b8230b",
+            "name": "IT Department 1778074519660"
+        },
+        "email": "suki.updated1778074520258@example.com",
+        "fullName": "Suki Updated",
+        "id": "b98fa845-fefb-4ce4-92e2-35ed919ed4b1",
+        "ktp": "1231778074520038",
+        "nip": "NIP1778074520258",
+        "phone": "081234567890",
+        "photo": null,
+        "position": {
+            "description": "Posisi untuk testing",
+            "id": "a5ae5c63-5b9e-4c10-8dea-78a032c3384f",
+            "name": "UI Engineer 1778074519792"
+        }
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteEmployee" classname="com.juaracoding.Employee" time="0.129">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Employee deleted successfully",
+    "data": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetProfileAdmin" classname="com.juaracoding.UserProfile" time="0.107">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Department deleted successfully",
+    "data": null
+}
+{
+    "success": true,
+    "message": "Position deleted successfully",
+    "data": null
+}
+{
+    "success": true,
+    "message": "Profile fetched successfully",
+    "data": {
+        "active": true,
+        "email": "admin@ptdika.com",
+        "employee": null,
+        "fullName": "Admin Updated",
+        "id": "af4b61c0-6a47-4217-8ac6-5a2042b4a88a",
+        "ipAddress": "125.163.23.72",
+        "lastAccess": "2026-05-06T20:35:15.65573",
+        "photo": "https://devops.juaracoding.com/hris/uploads/profile_admin_e94adb31-935c-4be0-95ac-b327592b5b79.jpeg",
+        "roles": [
+            "ROLE_ADMIN"
+        ],
+        "username": "admin"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetProfileUser" classname="com.juaracoding.UserProfile" time="0.1">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Profile fetched successfully",
+    "data": {
+        "active": true,
+        "email": "user@ptdika.com",
+        "employee": null,
+        "fullName": "Regular Employee",
+        "id": "4e2854fd-a2e8-49d8-8060-5e1d27a22f99",
+        "ipAddress": "125.163.23.72",
+        "lastAccess": "2026-05-06T20:35:16.023079",
+        "photo": null,
+        "roles": [
+            "ROLE_USER"
+        ],
+        "username": "user"
+    }
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetProfileUnauthorized" classname="com.juaracoding.UserProfile" time="0.086">
+    <system-out><![CDATA[{
+    "success": false,
+    "message": "Unauthorized: Please provide valid credentials",
+    "data": null
+}
+[PASS] Get profile tanpa token - status: 401
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateProfileAdmin" classname="com.juaracoding.UserProfile" time="0.164">
+    <system-out><![CDATA[{
+    "success": true,
+    "message": "Profile updated successfully",
+    "data": {
+        "active": true,
+        "email": "admin@ptdika.com",
+        "employee": null,
+        "fullName": "Admin Updated",
+        "id": "af4b61c0-6a47-4217-8ac6-5a2042b4a88a",
+        "ipAddress": "125.163.23.72",
+        "lastAccess": "2026-05-06T20:35:15.65573",
+        "photo": "https://devops.juaracoding.com/hris/uploads/profile_admin_5a780397-422c-4462-98d7-0d730e6fb61d.jpeg",
+        "roles": [
+            "ROLE_ADMIN"
+        ],
+        "username": "admin"
+    }
+}
+]]></system-out>
+  </testcase>
+</testsuite>

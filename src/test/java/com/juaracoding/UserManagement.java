@@ -1,5 +1,6 @@
 package com.juaracoding;
 
+import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
@@ -23,17 +24,15 @@ public class UserManagement extends BaseTest {
 
     @Test(priority = 2, description = "add data user")
     public void testAddUser() {
-        String userName = "Suki" + System.currentTimeMillis(); // Unik
+        String username = "Suki" + System.currentTimeMillis(); // Unik
         String password = "password123";
         String email = "suki" + System.currentTimeMillis() + "@example.com";
         String fullName = "Suki ahmad";
-        String roles = "USER"; // Bisa juga "ADMIN" tergantung kebutuhan
-
-
+        List<String> roles = List.of("ROLE_USER");  // ← List, bukan String
         Response response = adminRequest()
                 .contentType("application/json")
                 .body(Map.of(
-                    "userName", userName,
+                    "username", username,
                     "password", password,
                     "email", email,
                     "fullName", fullName,
@@ -68,21 +67,28 @@ public class UserManagement extends BaseTest {
 
     @Test(priority = 4, description = "update data user")
     public void testUpdateUser() {
-        String newFullName = "Suki Ahmad Updated";
-        String newRoles = "USER,ADMIN"; // Contoh update role
+        String username    = "SukiUpdated" + System.currentTimeMillis();
+        String password    = "password123";
+        String email       = "sukiupdated" + System.currentTimeMillis() + "@example.com";
+        String fullName    = "Suki Ahmad Updated";
+        List<String> roles = List.of("ROLE_USER");
+
         Response response = adminRequest()
-                .contentType("application/json")
                 .pathParam("id", userId)
                 .body(Map.of(
-                    "fullName", newFullName,
-                    "roles", newRoles
+                        "username", username,   // ← wajib ada
+                        "password", password,   // ← wajib ada
+                        "email",    email,      // ← wajib ada
+                        "fullName", fullName,
+                        "roles",    roles
                 ))
-            .when()
+                .when()
                 .put("/api/users/{id}")
-            .then()
+                .then()
                 .log().body()
                 .statusCode(200)
                 .extract().response();
+
         Assert.assertEquals(response.statusCode(), 200);
     }
 
