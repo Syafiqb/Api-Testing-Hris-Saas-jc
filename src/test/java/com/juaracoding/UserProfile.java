@@ -76,6 +76,7 @@ public class UserProfile extends BaseTest {
                 .extract().response();
 
         Assert.assertEquals(response.statusCode(), 200);
+        
     }
 
 

@@ -41,9 +41,23 @@ public class BaseTest {
         } else {
             throw new RuntimeException("Admin login gagal");
         }
-    }
+    
+        Response userResponse = given()
+                .contentType(ContentType.JSON)
+                .body(Map.of("email", "user@ptdika.com", "password", "p4ssw0rd"))
+                .post("/api/auth/login");
 
+        if (userResponse.statusCode() == 200) {
+            userToken = userResponse.jsonPath().getString("data.token");
+            userRefreshToken = userResponse.jsonPath().getString("data.refreshToken");
+        } else {
+            throw new RuntimeException("User login gagal");
+        }
+
+        System.out.println("USER TOKEN = " + userToken);
+    }
  
+
     protected RequestSpecification adminRequest() {
         return given()
                 .contentType(ContentType.JSON)
@@ -54,6 +68,7 @@ public class BaseTest {
         return given()
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer " + userToken);
+        
     }
  
     protected RequestSpecification noAuthRequest() {
