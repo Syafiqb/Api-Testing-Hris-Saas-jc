@@ -14,19 +14,7 @@ Proyek automated API testing untuk sistem **HRIS (Human Resource Information Sys
 
 ---
 
-## Konfigurasi Awal
 
-Buat file `.env` di root proyek sebelum menjalankan test:
-
-```env
-EMAILADMIN=admin@ptdika.com
-EMAILUSER=user@ptdika.com
-PASSWORD=p4ssw0rd
-```
-
-> File `.env` tidak boleh di-commit ke repository.
-
----
 
 ## Cara Menjalankan Test
 

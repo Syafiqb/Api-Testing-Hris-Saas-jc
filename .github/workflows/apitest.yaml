@@ -39,3 +39,9 @@ jobs:
       with:
         name: cucumber-reports
         path: target/ExtentReports/ # Sesuaikan path report kamu
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./target/ExtentReports
