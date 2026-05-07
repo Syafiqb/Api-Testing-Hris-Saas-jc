@@ -28,8 +28,8 @@ public class BaseTest {
 
         RestAssured.baseURI = "https://devops.juaracoding.com/hris";
 
-        String emailAdmin = dotenv.get("EMAILADMIN", "admin@ptdika.com");
-        String password = dotenv.get("PASSWORD", "p4ssw0rd");
+        String emailAdmin = dotenv.get("EMAILADMIN");
+        String password = dotenv.get("PASSWORD");
 
         Response adminResponse = given()
                 .contentType(ContentType.JSON)
