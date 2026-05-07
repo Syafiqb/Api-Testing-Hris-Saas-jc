@@ -16,7 +16,7 @@ public class ExtentTestNGListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         if (extent == null) {
-            ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReports/ExtentReport.html");
+            ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReports/index.html");
             spark.config().setReportName("HRIS API Test Suite");
             spark.config().setDocumentTitle("Test Execution Report");
             
